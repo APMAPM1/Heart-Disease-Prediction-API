@@ -46,55 +46,55 @@ This is a multivariate type of dataset which means providing or involving a vari
 ## 📁 Folder Structure  
 
 ```plaintext
-├── LICENSE                    # License file (MIT Recommended)
-├── MANIFEST                   # Package metadata
-├── README.md                  # Documentation
+├── LICENSE                           # License file (MIT Recommended)
+├── README.md                         # Documentation
 ├── docs
-│   ├── DOCS.md                # API Documentation
-│   ├── authorize.png           # Security Flow Diagram
-│   ├── sample_payload.json     # Sample Payload for Testing
-│   ├── sample_payload.png      # Sample Input Screenshot
-├── fastapi_skeleton            # Main API module
+│   ├── DOCS.md                       # API Documentation
+│   ├── sample_payload.json           # Sample Payload for Testing
+│   ├── sample_payload_post.png       # Sample Input Screenshot
+│   ├── sample_payload_response.png   # Sample Response Screenshot
+├── fastapi_skeleton                  # Main API module
 │   ├── __init__.py
-│   ├── api                     # API routes
+│   ├── api                           # API routes
 │   │   ├── __init__.py
 │   │   └── routes
 │   │       ├── __init__.py
-│   │       ├── heartbeat.py     # Server health check
-│   │       ├── prediction.py    # Prediction endpoint
-│   │       └── router.py        # Main router
+│   │       ├── heartbeat.py          # Server health check
+│   │       ├── prediction.py         # Prediction endpoint
+│   │       └── router.py             # Main router
 │   ├── core
 │   │   ├── __init__.py
-│   │   ├── config.py           # Server configuration
-│   │   ├── event_handlers.py   # Start/Stop event handlers
-│   │   ├── messages.py         # Common messages
-│   │   └── security.py         # API key validation
-│   ├── main.py                 # Application entry point
+│   │   ├── config.py                 # Server configuration
+│   │   ├── event_handlers.py         # Start/Stop event handlers
+│   │   ├── messages.py               # Common messages
+│   │   └── security.py               # API key validation
+│   ├── main.py                       # Application entry point
 │   ├── models
 │   │   ├── __init__.py
-│   │   ├── heartbeat.py        # Data model for heartbeat
-│   │   ├── payload.py          # Data model for input
-│   │   └── prediction.py       # Data model for predictions
+│   │   ├── heartbeat.py              # Data model for heartbeat
+│   │   ├── payload.py                # Data model for input
+│   │   └── prediction.py             # Data model for predictions
 │   └── services
 │       ├── __init__.py
-│       └── models.py           # ML model loading & inference
-├── requirements.txt            # Dependencies
+│       └── model_service.py          # ML model loading & inference
+├── requirements.txt                  # Dependencies
 ├── sample_model
 │   ├── lin_reg_california_housing_model.joblib # Sample ML model
-│   └── model_description.md    # Model details
-├── setup.py                    # Python setup script
+│   └── model_description.md          # Model details
+├── setup.py                          # Python setup script
 ├── tests
 │   ├── __init__.py
-│   ├── conftest.py             # Test setup
+│   ├── conftest.py                   # Test setup
 │   ├── test_api
 │   │   ├── __init__.py 
-│   │   ├── test_api_auth.py    # Authentication tests
-│   │   ├── test_heartbeat.py   # Health check tests
-│   │   └── test_prediction.py  # ML prediction tests
+│   │   ├── test_heartbeat.py         # Health check tests
+│   │   └── test_prediction.py        # ML prediction tests
 │   └── test_service
 │       ├── __init__.py       
-│       └── test_models.py      # Model validation tests
-└── tox.ini                     # Tox test configuration
+│       └── test_model_service.py     # Model validation tests
+├── tox.ini                           # Tox test configuration
+└── .env                              # Environment variables (API keys, database URLs, secrets)
+
 ```
 
 ## Run It
