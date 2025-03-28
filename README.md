@@ -1,6 +1,8 @@
-# Heart-Disease-Prediction
+# Heart-Disease-Prediction 🩺❤️
 
 World Health Organization has estimated 12 million deaths occur worldwide, every year due to Heart diseases. Half the deaths in the United States and other developed countries are due to cardio vascular diseases. The early prognosis of cardiovascular diseases can aid in making decisions on lifestyle changes in high risk patients and in turn reduce the complications.
+
+This is a **FastAPI-based API** for predicting the likelihood of heart disease using a pre-trained **K-Nearest Neighbors (KNN) machine learning model**.  
 
 ## Dataset Description
 
@@ -40,3 +42,85 @@ This is a multivariate type of dataset which means providing or involving a vari
 **vessels_colored_by_flourosopy:** number of major vessels (0-3) colored by flourosopy </br>
 **thalassemia:** A blood disorder called thalassemia (3 = normal; 6 = fixed defect; 7 = reversable defect) </br>
 **target:** 0 No Heart disease 1 Heart disease
+
+## 📁 Folder Structure  
+
+```plaintext
+├── LICENSE                    # License file (MIT Recommended)
+├── MANIFEST                   # Package metadata
+├── README.md                  # Documentation
+├── docs
+│   ├── DOCS.md                # API Documentation
+│   ├── authorize.png           # Security Flow Diagram
+│   ├── sample_payload.json     # Sample Payload for Testing
+│   ├── sample_payload.png      # Sample Input Screenshot
+├── fastapi_skeleton            # Main API module
+│   ├── __init__.py
+│   ├── api                     # API routes
+│   │   ├── __init__.py
+│   │   └── routes
+│   │       ├── __init__.py
+│   │       ├── heartbeat.py     # Server health check
+│   │       ├── prediction.py    # Prediction endpoint
+│   │       └── router.py        # Main router
+│   ├── core
+│   │   ├── __init__.py
+│   │   ├── config.py           # Server configuration
+│   │   ├── event_handlers.py   # Start/Stop event handlers
+│   │   ├── messages.py         # Common messages
+│   │   └── security.py         # API key validation
+│   ├── main.py                 # Application entry point
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── heartbeat.py        # Data model for heartbeat
+│   │   ├── payload.py          # Data model for input
+│   │   └── prediction.py       # Data model for predictions
+│   └── services
+│       ├── __init__.py
+│       └── models.py           # ML model loading & inference
+├── requirements.txt            # Dependencies
+├── sample_model
+│   ├── lin_reg_california_housing_model.joblib # Sample ML model
+│   └── model_description.md    # Model details
+├── setup.py                    # Python setup script
+├── tests
+│   ├── __init__.py
+│   ├── conftest.py             # Test setup
+│   ├── test_api
+│   │   ├── __init__.py 
+│   │   ├── test_api_auth.py    # Authentication tests
+│   │   ├── test_heartbeat.py   # Health check tests
+│   │   └── test_prediction.py  # ML prediction tests
+│   └── test_service
+│       ├── __init__.py       
+│       └── test_models.py      # Model validation tests
+└── tox.ini                     # Tox test configuration
+```
+
+## Run It
+
+1. Start your  app with:
+
+```
+uvicorn fastapi_skeleton.main:app
+```
+
+2. Go to [http://localhost:8000/docs](http://localhost:8000/docs).
+
+3. You can use the sample payload from the `docs/sample_payload.json` file when trying out the heart disease prediction model using the API. ![Prediction with example payload](./docs/sample_payload_post.png)
+
+Response
+
+![Response with example payload](./docs/sample_payload_response.png)
+
+4. To view API documentation:
+
+- Swagger UI: `http://127.0.0.1:8000/docs`
+
+- Redoc UI: `http://127.0.0.1:8000/redoc`
+
+
+## 📜 License
+
+This project is licensed under the MIT License.
+See the LICENSE file for details.
