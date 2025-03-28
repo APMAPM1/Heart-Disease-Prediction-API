@@ -1,11 +1,7 @@
-from heart_disease_api.services.models import load_model
+from fastapi import FastAPI
 
-def start_app_handler(app) -> callable:
-    def startup() -> None:
-        load_model()
-    return startup
+def start_app_handler(app: FastAPI):
+    print("🚀 Heart Disease Prediction API is starting...")
 
-def stop_app_handler(app) -> callable:
-    def shutdown() -> None:
-        pass
-    return shutdown
+def stop_app_handler(app: FastAPI):
+    print("🛑 Heart Disease Prediction API is shutting down...")

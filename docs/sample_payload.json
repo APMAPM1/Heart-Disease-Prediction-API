@@ -1,0 +1,15 @@
+{
+    "age": 36,
+    "sex": 1,
+    "chest_pain_type": 1,
+    "resting_blood_pressure": 150,
+    "cholestoral": 175,
+    "fasting_blood_sugar": 1,
+    "rest_ecg": 0,
+    "Max_heart_rate": 180,
+    "exercise_induced_angina": 0,
+    "oldpeak": 3.2,
+    "slope": 0,
+    "vessels_colored_by_flourosopy": 2,
+    "thalassemia": 0
+  }

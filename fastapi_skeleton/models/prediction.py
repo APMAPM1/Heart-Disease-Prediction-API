@@ -1,4 +1,4 @@
 from pydantic import BaseModel
 
-class HeartDiseaseResult(BaseModel):
+class PredictionResult(BaseModel):
     prediction: str
